@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form liên hệ</title>
+    <style>
+        body{
+            text-align: center;
+            background-image: url('cyann.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            padding: 8px;
+            border: 6px double darkcyan;
+            word-wrap: break-word;
+            font-size: 42px;
+        }
+        table{
+            margin-left: auto;
+            margin-right:auto;
+            font-size: 20px;
+        }
+        input:valid{
+            border: 1px solid green;
+        }
+        input:invalid{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <form action="XuLyLienHe.php" method="get"></form>
+    <div>
+        <form>
+            <h1>FORM LIÊN HỆ</h1>
+            <table>
+                <tr>
+                    <td>Họ tên:</td>
+                    <td>
+                        <input name="hoten" type="text" minlength="3" maxlength="50" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>
+                        <input name="email" type="email" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Di động:</td>
+                    <td>
+                        <input name="SDT" type="text" pattern="(\+84|0)[9875]\d{8}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nội dung:</td>
+                    <td>
+                        <textarea name="noidung" rows="4" cols="20"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bản đồ:</td>
+                    <td>
+                        <input type="file" id="file-upload" name="bando" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="reset">Nhập lại</button>
+                        <button type="submit">Gửi đi</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
